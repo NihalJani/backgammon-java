@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+/**
+ * This class is a tester class designed to get the different programs to work together (This might be the blueprints for
+ * the future "World" class).
+ */
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Dice dice = new Dice();
+        Game game = new Game();
+        int[] newArray = new int[4];
+
+        System.out.println(Arrays.toString(dice.filler()));
+
+        for(int j = 0; j < dice.array.length; j++) {
+            newArray[j] = dice.array[j];
+            System.out.println(newArray[j]);
+        }
+
+        System.out.println("Please enter your name: ");
+        String name = input.next();
+        System.out.println("Please enter the colour you would like to play as: Black(0) or White(1)");
+        char col = input.next().charAt(0);
+        Player play = new Player(name, col);
+        System.out.println(play.getName()+", "+play.getPiece());
+
+        System.out.println(game.winConditions(24, 24));
+    }
+}

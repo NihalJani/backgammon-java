@@ -1,0 +1,31 @@
+public class Player {
+        /**
+         * Player class defines the name of the player and what colour they want to play as.
+         */
+        private String name;
+        private String pieceColour;
+
+//        public Player(String name , char pieceColour ) {
+//            this.name = name;
+//            this.pieceColour = pieceColour;
+//        }
+    /**
+     * The method below is the original method that Trey wrote, I don't know if it is just my coding style but when I
+     * tested it there was trouble calling the method because there was a constructor for the class "Player". I put the
+     * use for the commented out code with the one above to create the new constructor for "Player".
+     */
+//        public Player(){
+//            this.name = "Player";
+//            this.pieceColour = ' ';
+//        }
+    public Player(String name, char pieceColour) {
+        this.name = "Player: "+name;
+        this.pieceColour = "'"+pieceColour+"'";
+    }
+    public String getName() {
+        return name;
+    }
+    public String getPiece() {
+        return pieceColour;
+    }
+}
